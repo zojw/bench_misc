@@ -40,9 +40,9 @@ sudo apt-get install -y \
     smartmontools \
     nvme-cli \
     tcpdump
-    
-# ---- mount ssd     
-    
+
+# ---- mount ssd
+
 DEV=nvme0n1
 POINT=mnt
 
@@ -74,7 +74,7 @@ echo $(blkid /dev/${DEV}p1 | awk '{print $2}' | sed 's/\"//g') /${POINT} ext4 de
 
 cat /etc/fstab
 mount -a
-df -h 
+df -h
 
 # ---- config ext4
 
@@ -178,11 +178,3 @@ cat >>/etc/hosts <<EOF
 199.232.96.133    user-images.githubusercontent.com
 # GitHub End
 EOF
-
-wget https://github.com/facebook/rocksdb/archive/refs/tags/v7.7.3.tar.gz -P /mnt
-cd /mnt
-mkdir data
-tar zxvf v7.7.3.tar.gz
-cd /mnt/rocksdb-7.7.3
-make static_lib -j 8
-DEBUG_LEVEL=0 make db_bench

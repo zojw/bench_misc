@@ -1,0 +1,1 @@
+bash w_load.sh 1
