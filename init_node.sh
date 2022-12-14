@@ -25,6 +25,7 @@ sudo apt-get install -y \
     cmake \
     time \
     psmisc \
+    cgroup-tools \
     jq
 
 # install monitors
