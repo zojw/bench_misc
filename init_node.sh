@@ -26,6 +26,7 @@ sudo apt-get install -y \
     time \
     psmisc \
     cgroup-tools \
+    zip \
     jq
 
 # install monitors
