@@ -6,7 +6,7 @@ ROCKSDB_INSTALL_DIR=/mnt/rocksdb-7.7.3
 
 # -- bench argument
 ENV_VARS="\
-  JOB_ID=$job_id \
+  JOB_ID=$JOB_ID \
   DB_DIR=$ROCKSDB_DATA_DIR \
   WAL_DIR=$ROCKSDB_DATA_DIR \
   CACHE_SIZE=536870912 \

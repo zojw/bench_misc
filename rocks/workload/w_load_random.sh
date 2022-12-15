@@ -1,7 +1,7 @@
 source ../config.sh
 source ../limit_res.sh
 
-keys=25000000
+keys=400000000
 threads={$1:-1}
 
 cd ${ROCKSDB_INSTALL_DIR}
