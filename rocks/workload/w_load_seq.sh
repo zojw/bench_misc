@@ -5,4 +5,5 @@ keys=400000000
 threads={$1:-1}
 
 cd ${ROCKSDB_INSTALL_DIR}
-env -S "$ENV_VARS" THREADS=$threads NUM_KEYS=$keys bash tools/benchmark.sh fillseq_disable_wal,waitforcompaction
+cat tools/benchmark.sh  | sed '/\-\-report/i       $bench_args \\' > pbenchmark.sh
+env -S "$ENV_VARS" THREADS=$threads NUM_KEYS=$keys bash pbenchmark.sh fillseq_disable_wal,waitforcompaction --memtablerep=skip_list --threads=$threads
