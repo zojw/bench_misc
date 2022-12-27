@@ -1,7 +1,7 @@
 source ../config.sh
 source ../limit_res.sh
 
-keys=400000000
+keys=40000000
 threads={$1:-1}
 
 cd ${INSTALL_DIR}
